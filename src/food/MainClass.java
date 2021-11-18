@@ -1,6 +1,7 @@
 package food;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class MainClass {
@@ -15,9 +16,6 @@ public class MainClass {
 		// 사용자로 부터 입력을 받기 위한 준비
 		Scanner sc = new Scanner(System.in);
 		// 메뉴을 입력
-//		System.out.println("숫자를 입력하시오");
-//		int a = sc.nextInt();
-//		System.out.println("당신이 입력한 숫자는? " + a);
 
 		// 여기서 부터 반복
 		while (true) {
@@ -25,7 +23,6 @@ public class MainClass {
 //		sc.nextLine();   // 숫자입력 받고 난뒤 엔터키값(개행문자) 처리하기 위해
 			System.out.print("메뉴입력: ");
 			String menu = sc.nextLine(); // 메뉴를 입력 받기
-			System.out.println("입력값: " + menu);
 			// 만약에 입력값이 0 이면 반복문을 나가자
 			if (menu.equals("0")) {   // 문자열을 비교 할 때 equals 메소드를 사용
 				break;
@@ -47,14 +44,15 @@ public class MainClass {
 		for (String m : menuList) {
 			System.out.println("당신이 입력한 메뉴는? " + m);	
 		}
-		// 위와 같이 메뉴를 하나 밖에 못담는데 내가 원하는데로 입력을 받고
-		// 만약에 입력 받는것을 끝내기 위해 0을 입력하면 입력 받기 종료하고
-		// 지금까지 입력된 메뉴 리스트를 출력
 
 		// 메뉴들을 입력하고 저장된
 		// 메뉴들 중에 하나를 알아서 추천
 		// 추천 결과를 출력
-
+		Random rnd = new Random();
+		int rnum = rnd.nextInt(menuList.size());
+		System.out.println("이 메뉴들 중에서 엄청난 알고리즘으로 ");
+		System.out.println("선택된 메뉴는~~  ");
+		System.out.println(menuList.get(rnum) + "입니다.");
 	}
 
 }
