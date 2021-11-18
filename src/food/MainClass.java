@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class MainClass {
 
 	public static void main(String[] args) {
-		// 머먹지 프로그램
-		System.out.println("머먹지 프로그램 시작");
+		// 메뉴 통일 프로그램
+		System.out.println("메뉴통일 프로그램 시작");
 		// 메뉴를 추가(이 프로그램 사용자가 직접 입력)
 		// 메뉴들을 담을수 있는 공간을 만들기
 		ArrayList<String> menuList = new ArrayList<String>();
