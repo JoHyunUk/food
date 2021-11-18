@@ -9,7 +9,6 @@ public class MainClass {
 	public static void main(String[] args) {
 		// 머먹지 프로그램
 		System.out.println("머먹지 프로그램 시작");
-		// 메뉴를 추가(프로그램 자체에서 메뉴 설정)
 		// 메뉴를 추가(이 프로그램 사용자가 직접 입력)
 		// 메뉴들을 담을수 있는 공간을 만들기
 		ArrayList<String> menuList = new ArrayList<String>();
@@ -32,11 +31,7 @@ public class MainClass {
 		}
 		// 여기까지 반복
 
-//		System.out.println("당신이 입력한 메뉴의 갯수는? " + menuList.size());
-//		System.out.println("당신이 입력한 메뉴는? " + menuList.get(0));
-//		System.out.println("당신이 입력한 메뉴는? " + menuList.get(1));
-//		System.out.println("당신이 입력한 메뉴는? " + menuList.get(2));
-//		
+
 		// 사용자가 여러개 입력을 한 메뉴를 한번에 출력하기 위해
 //		for (int i=0; i<menuList.size(); i++) {
 //			System.out.println("당신이 입력한 메뉴는? " + menuList.get(i));	
@@ -50,9 +45,8 @@ public class MainClass {
 		// 추천 결과를 출력
 		Random rnd = new Random();
 		int rnum = rnd.nextInt(menuList.size());
-		System.out.println("이 메뉴들 중에서 엄청난 알고리즘으로 ");
-		System.out.println("선택된 메뉴는~~  ");
-		System.out.println(menuList.get(rnum) + "입니다.");
+		System.out.println("이 메뉴들 중에서 선택된 메뉴는 ");
+		System.out.println(menuList.get(rnum) + " 입니다.");
 	}
 
 }
